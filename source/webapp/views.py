@@ -1,14 +1,17 @@
 from django.shortcuts import render, get_object_or_404, redirect
 
-from webapp.forms import GuestForm, DeleteForm
+from webapp.forms import GuestForm, DeleteForm, SearchForm
 from webapp.models import Guest
 
 
 def index_view(request):
-    context = {
-        'guests': Guest.objects.all().filter(status='active').order_by('-created_at')
-    }
-    return render(request, 'index.html', context)
+    form = SearchForm(data=request.GET)
+    if form.is_valid():
+        guests = Guest.objects.filter(status='active', author_name__icontains=form.cleaned_data.get('search')).order_by('-created_at')
+    else:
+        guests = Guest.objects.filter(status='active').order_by('-created_at')
+    return render(request, 'index.html', {'guests': guests, 'form': form})
+
 
 def guest_add_view(request):
     form = GuestForm()

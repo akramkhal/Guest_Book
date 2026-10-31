@@ -2,6 +2,15 @@
 {% block title %}Гостевая книга{% endblock %}
 {% block content %}
     <h1 class="mb-4">Гостевая книга</h1>
+
+    <form method="GET">
+        <div class="d-flex gap-2 mb-4">
+            {{ form.search }}
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </div>
+    </form>
+
+
     {% if guests %}
         {% for guest in guests %}
             <div class="card mb-3">
