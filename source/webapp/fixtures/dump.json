@@ -1,0 +1,74 @@
+[
+{
+  "model": "webapp.guest",
+  "pk": 1,
+  "fields": {
+    "author_name": "Иван Петров",
+    "author_email": "ivan.petrov@example.com",
+    "text": "Отличный сайт! Всё понятно и удобно. Спасибо за вашу работу, обязательно порекомендую друзьям.",
+    "created_at": "2026-10-31T08:33:31.315Z",
+    "updated_at": "2026-10-31T08:33:31.315Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 2,
+  "fields": {
+    "author_name": "Анна Смирнова",
+    "author_email": "anna.smirnova@example.com",
+    "text": "Была у вас в гостях на прошлой неделе. Очень уютная атмосфера и приветливые люди. Хочется вернуться снова!",
+    "created_at": "2026-10-31T08:33:47.362Z",
+    "updated_at": "2026-10-31T08:33:47.362Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 3,
+  "fields": {
+    "author_name": "John Doe",
+    "author_email": "john_doe@example.com",
+    "text": "Great place and friendly staff. I really enjoyed my visit and will definitely come back next year.",
+    "created_at": "2026-10-31T08:33:59.579Z",
+    "updated_at": "2026-10-31T08:33:59.579Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 4,
+  "fields": {
+    "author_name": "Мария Кузнецова",
+    "author_email": "maria.k@example.com",
+    "text": "Хотела бы предложить добавить больше фотографий на главную страницу. В остальном всё замечательно, спасибо!",
+    "created_at": "2026-10-31T08:34:13.872Z",
+    "updated_at": "2026-10-31T08:34:13.872Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 5,
+  "fields": {
+    "author_name": "Спамер",
+    "author_email": "spam@example.com",
+    "text": "Купите дешёвые часы по ссылке! Лучшие цены только сегодня!!!",
+    "created_at": "2026-10-31T08:34:30.011Z",
+    "updated_at": "2026-10-31T08:34:30.011Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 6,
+  "fields": {
+    "author_name": "Vasilii Pupkin",
+    "author_email": "vasya@example.com",
+    "text": "Этот отзыв содержит грубые выражения и был скрыт модератором.",
+    "created_at": "2026-10-31T08:34:43.815Z",
+    "updated_at": "2026-10-31T08:34:43.815Z",
+    "status": "blocked"
+  }
+}
+]
