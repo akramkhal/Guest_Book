@@ -15,10 +15,13 @@
 <body>
 
 <nav class="navbar bg-body-tertiary">
-  <div class="container">
+  <div class="container d-flex gap-2">
     <a class="navbar-brand" href="{% url 'index' %}">
       <i class="bi bi-journal-medical me-2"></i>Гостевая Книга
     </a>
+      <a class="nav-link" href="{% url 'guest_add' %}">
+        <i class="bi bi-person-add me-2"></i>Добавить запись
+      </a>
   </div>
 </nav>
 
