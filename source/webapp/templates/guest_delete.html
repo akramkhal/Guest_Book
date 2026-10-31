@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Удалить запись{% endblock %}
+{% block content %}
+    <h2>Удалить запись "{{ guest.author_name }}"?</h2>
+    <div class="col-md-6">
+        {% include 'partial/guest_form.html' with button_value='Удалить' %}
+    </div>
+{% endblock %}
+

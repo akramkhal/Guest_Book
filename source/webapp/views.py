@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 
-from webapp.forms import GuestForm
+from webapp.forms import GuestForm, DeleteForm
 from webapp.models import Guest
 
 
@@ -42,3 +42,19 @@ def guest_update_view(request, pk):
         else:
             return render(request, 'guest_update.html', {'form': form, 'guest': guest})
 
+def guest_delete_view(request, pk):
+    guest = get_object_or_404(Guest, pk=pk)
+    form = DeleteForm()
+    if request.method == 'GET':
+        return render(request, 'guest_delete.html', {'form': form, 'guest': guest})
+    elif request.method == 'POST':
+        form = DeleteForm(data=request.POST)
+        if form.is_valid():
+            if guest.author_email == form.cleaned_data.get('email'):
+                guest.delete()
+                return redirect('index')
+            else:
+                form.add_error('email', 'Email не совпадает с почтой автора записи!')
+        else:
+            return render(request, 'guest_delete.html', {'form': form, 'guest': guest})
+    return render(request, 'guest_delete.html', {'form': form, 'guest': guest})

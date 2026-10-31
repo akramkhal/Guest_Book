@@ -9,7 +9,7 @@
                 <span class="fw-bold">{{ guest.author_name }} ({{ guest.author_email }})</span>
                 <div>
                     <a href="{% url 'guest_update' guest.pk %}" class="text-primary me-2"><i class="bi bi-pen"></i></a>
-                    <a href="#" class="text-danger"><i class="bi bi-trash3"></i></a>
+                    <a href="{% url 'guest_delete' guest.pk %}" class="text-danger"><i class="bi bi-trash3"></i></a>
                 </div>
              </div>
               <div class="card-body">
