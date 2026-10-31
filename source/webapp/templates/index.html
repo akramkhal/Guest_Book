@@ -10,7 +10,6 @@
         </div>
     </form>
 
-
     {% if guests %}
         {% for guest in guests %}
             <div class="card mb-3">
@@ -30,5 +29,11 @@
     {% else %}
         <div class="alert alert-info">Записей пока нет!</div>
     {% endif %}
+
+<h3 class="mt-5">Добавить новую запись</h3>
+{% url 'guest_add' as add_url %}
+<div class="col-md-6">
+    {% include 'partial/guest_form.html' with button_value='Добавить' form=guest_form action=add_url %}
+</div>
 {% endblock %}
 
